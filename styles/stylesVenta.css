@@ -1,0 +1,234 @@
+/* =========================================
+   ESTILOS EXCLUSIVOS PARA LA PÁGINA DE VENTA
+   Archivo: stylesVenta.css
+   ========================================= */
+
+/* 1. ESTRUCTURA DE LA PÁGINA (Dos Columnas) */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide el espacio en dos partes iguales */
+    gap: 60px; /* Espacio entre el texto y el formulario */
+    padding: 60px 20px;
+    align-items: start; /* Alinea los elementos al inicio (arriba) */
+}
+
+/* 2. ESTILOS DE LA COLUMNA IZQUIERDA (Textos y Contacto) */
+.venta-header-text h3 {
+    color: #b2945e; /* Dorado */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.venta-header-text h1 {
+    font-family: 'Playfair Display', serif; /* Fuente elegante */
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #121212; /* Negro oscuro */
+}
+
+.venta-header-text p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Sección de Detalles de Contacto */
+.contact-details {
+    margin-top: 50px;
+    border-top: 1px solid #eee; /* Línea separadora sutil */
+    padding-top: 30px;
+}
+
+.contact-details h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #121212;
+}
+
+.info-block { 
+    margin-bottom: 25px; 
+}
+
+.info-block h4 {
+    color: #b2945e;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.info-block a { 
+    text-decoration: none; 
+    color: #333; 
+    transition: color 0.3s;
+}
+
+.info-block a:hover {
+    color: #b2945e;
+}
+
+/* 3. ESTILOS DE LA COLUMNA DERECHA (El Formulario) */
+
+/* Contenedor del formulario (La caja gris) */
+.venta-formulario-container {
+    background-color: #fcfcfc; /* Gris muy claro */
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03); /* Sombra suave */
+}
+
+.venta-formulario h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #121212;
+}
+
+.venta-formulario p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+}
+
+/* --- QUITAR EL MARCO NEGRO --- */
+.venta-formulario fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.form-group { 
+    margin-bottom: 20px; 
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #444;
+    letter-spacing: 0.5px;
+}
+
+/* Inputs Bonitos y Grandes (Evita el "aplastamiento") */
+.venta-formulario input[type="text"],
+.venta-formulario input[type="email"],
+.venta-formulario input[type="tel"],
+.venta-formulario input[type="number"],
+.venta-formulario select,
+.venta-formulario textarea {
+    width: 100%;
+    padding: 15px; /* Altura cómoda para escribir */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Efecto al hacer clic en un campo */
+.venta-formulario input:focus,
+.venta-formulario textarea:focus,
+.venta-formulario select:focus {
+    border-color: #b2945e; /* Dorado */
+    box-shadow: 0 0 0 3px rgba(178, 148, 94, 0.1); /* Resplandor suave */
+}
+
+/* Grid para Dirección (Calle - Num - CP) */
+.address-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; /* El primero ocupa el doble */
+    gap: 15px;
+}
+
+/* Radio buttons (Opciones de propiedad) */
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    background: #fff;
+    padding: 8px 12px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+.radio-item:hover {
+    border-color: #b2945e;
+}
+
+/* Botones */
+.btn-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-submit {
+    flex: 2; /* Ocupa más espacio */
+    background-color: #121212;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #b2945e;
+}
+
+.btn-reset {
+    flex: 1;
+    background-color: #eee;
+    color: #555;
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn-reset:hover {
+    background-color: #ddd;
+}
+
+/* RESPONSIVE (Celulares) */
+@media (max-width: 900px) {
+    .content-grid { 
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: 40px; 
+    }
+    
+    .address-grid { 
+        grid-template-columns: 1fr; /* Dirección vertical */
+    }
+    
+    .venta-header-text h1 {
+        font-size: 2.5rem; /* Título más pequeño */
+    }
+}

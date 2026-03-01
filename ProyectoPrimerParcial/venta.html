@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Vender Propiedad | Elite Spaces</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/stylesVenta.css">
+</head>
+<body class="venta-page">
+
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo">
+                <h1>ELITE<span>SPACES</span></h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="Compras.html">Compras</a></li>
+                    <li><a href="blog.html">Blog</a></li> 
+                    <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container content-grid">
+        <section class="venta-info">
+            <div class="venta-header-text">
+                <h3>¿Buscas vender tu casa?</h3>
+                <h1>¡Nosotros te ayudamos!</h1>
+                <p>
+                    En Elite Spaces, entendemos que vender tu casa es una decisión importante.
+                    Nuestro equipo de expertos está aquí para guiarte en cada paso del proceso.
+                </p>
+            </div>
+
+            <div class="contact-details">
+                <h2>Contáctanos</h2>
+                <p>Somos una inmobiliaria enfocada en propiedades exclusivas. Si deseas más información puedes comunicarte con nosotros.</p>
+                
+                <div class="info-block">
+                    <h4>Dirección</h4>
+                    <address>
+                        Av. Camino Real 7345 <br>
+                        Puebla, Pue., México
+                    </address>
+                </div>
+                
+                <div class="info-block">
+                    <h4>Teléfono</h4>
+                    <p><a href="tel:+521248735272">+52 12 4873 5272</a></p>
+                </div>
+
+                <div class="info-block">
+                    <h4>Correos</h4>
+                    <p><a href="mailto:ventas@elitespaces.com">ventas@elitespaces.com</a></p>
+                    <p><a href="mailto:administracion@elitespaces.com">administracion@elitespaces.com</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="venta-formulario-container">
+            <div class="venta-formulario">
+                <h2>Formulario de Venta</h2>
+                <p>Llene el siguiente formulario y un asesor se pondrá en contacto con usted.</p>
+                
+                <form action="enviar_venta.php" method="POST">
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="+52 55 5555 5555" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Tipo de propiedad</label>
+                            <div class="radio-group">
+                                <label class="radio-item"><input type="radio" name="tipo_propiedad" value="casa" required> Casa</label>
+                                <label class="radio-item"><input type="radio" name="tipo_propiedad" value="departamento"> Departamento</label>
+                                <label class="radio-item"><input type="radio" name="tipo_propiedad" value="terreno"> Terreno</label>
+                                <label class="radio-item"><input type="radio" name="tipo_propiedad" value="penthouse"> Penthouse</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="detalles">Detalles de la propiedad</label>
+                            <textarea id="detalles" name="detalles" rows="5" placeholder="Habitaciones, m2, etc." required></textarea>
+                        </div>
+
+                        <div class="address-grid">
+                            <div class="form-group">
+                                <label for="calle">Calle</label>
+                                <input type="text" id="calle" name="calle" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="numero">N°</label>
+                                <input type="text" id="numero" name="numero" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="codigo_postal">CP</label>
+                                <input type="text" id="codigo_postal" name="cp" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ciudad">Ciudad</label>
+                            <select id="ciudad" name="ciudad" required>
+                                <option value="">Selecciona una ciudad</option>
+                                <option value="puebla">Puebla</option>
+                                <option value="cdmx">Ciudad de México</option>
+                                <option value="guadalajara">Guadalajara</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="precio">Precio de Venta (USD)</label>
+                            <input type="number" id="precio" name="precio" placeholder="$0.00" required>
+                        </div>
+
+                        <div class="btn-group">
+                            <input type="submit" value="Enviar Propiedad" class="btn-submit">
+                            <input type="reset" value="Limpiar" class="btn-reset">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <p>&copy; 2026 Elite Spaces Inmobiliaria. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,533 @@
+/* DOCUMENTACIÓN: Estilos Minimalistas Empresariales */
+
+:root {
+
+    --dark: #121212;
+
+    --gold: #b2945e;
+
+    --white: #ffffff;
+
+}
+
+
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+
+
+body { font-family: 'Montserrat', sans-serif; background-color: var(--white); }
+
+
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+
+
+/* Header - Esto debe alinear el logo y el menú */
+
+.main-header { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 2px solid var(--gold); }
+
+.header-flex { display: flex; width: 100%; justify-content: space-between; align-items: center; }
+
+.logo h1 { font-size: 1.2rem; letter-spacing: 3px; }
+
+.logo span { color: var(--gold); }
+
+.nav-links { display: flex; list-style: none; gap: 20px; }
+
+.nav-links a { text-decoration: none; color: var(--dark); font-size: 0.8rem; text-transform: uppercase; }
+
+
+
+/* Hero - Si esto funciona, verás un bloque negro grande al centro */
+
+.hero { height: 60vh; background-color: var(--dark); color: white; display: flex; align-items: center; justify-content: center; text-align: center; }
+
+.hero-text h2 { font-size: 3rem; margin-bottom: 10px; font-weight: 300; }
+
+
+
+/* Botones */
+
+.btn { padding: 12px 30px; text-decoration: none; display: inline-block; margin: 10px; font-size: 0.7rem; letter-spacing: 2px; }
+
+.btn-primary { background: var(--gold); color: white; }
+
+.btn-outline { border: 1px solid white; color: white; }
+
+
+
+/* Grid de 3 columnas */
+
+.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; padding: 60px 0; text-align: center; }
+
+.num { font-size: 2rem; color: var(--gold); display: block; }
+
+.buy-hero {
+
+    height: 40vh;
+
+}
+
+
+
+/* Tarjetas de Propiedades */
+
+.property-card {
+
+    background: #f9f9f9;
+
+    border: 1px solid #eee;
+
+    text-align: left;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    overflow: hidden; /* Para que la imagen no se salga */
+
+}
+
+
+
+.property-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+
+}
+
+
+
+.card-img-container {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 250px;
+
+    background-color: var(--dark);
+
+}
+
+
+
+.card-img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+
+/* Etiquetas sobre la imagen (Venta, Preventa, etc) */
+
+.tag {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 20px;
+
+    background-color: var(--dark);
+
+    color: var(--white);
+
+    padding: 5px 12px;
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+
+.card-content {
+
+    padding: 25px;
+
+}
+
+
+
+.price {
+
+    display: block;
+
+    color: var(--gold);
+
+    font-size: 1.4rem;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+
+}
+
+
+
+.card-title {
+
+    font-size: 1.1rem;
+
+    margin-bottom: 5px;
+
+    color: var(--dark);
+
+}
+
+
+
+.location {
+
+    font-size: 0.85rem;
+
+    color: #777;
+
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+}
+
+
+
+/* Especificaciones (Camas, Baños, m2) */
+
+.specs {
+
+    display: flex;
+
+    gap: 10px;
+
+    font-size: 0.8rem;
+
+    color: #555;
+
+    border-top: 1px solid #ddd;
+
+    border-bottom: 1px solid #ddd;
+
+    padding: 15px 0;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+/* Botón ancho completo para las tarjetas */
+
+.full-width {
+
+    display: block;
+
+    text-align: center;
+
+    margin: 0;
+
+}
+
+
+
+/* Sección oscura intermedia (CTA) */
+
+.cta-dark {
+
+    background-color: var(--dark);
+
+    color: var(--white);
+
+    padding: 80px 0;
+
+    text-align: center;
+
+}
+
+
+
+.cta-dark h3 {
+
+    font-size: 2rem;
+
+    font-weight: 300;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+.cta-dark p {
+
+    color: #ccc;
+
+    margin-bottom: 30px;
+
+}
+
+
+
+/* Ajustes del Formulario Centrado */
+
+.centered-card {
+
+    max-width: 600px;
+
+    margin: 0 auto;
+
+}
+
+
+
+.input-select {
+
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid #ccc;
+
+    background: #fff;
+
+    font-family: 'Montserrat', sans-serif;
+
+    color: #333;
+
+}
+
+
+
+/* Contenedor del Hero */
+
+.hero {
+
+    position: relative;
+
+    height: 60vh; /* O la altura que desees */
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden; /* Corta lo que sobresalga de la imagen */
+
+}
+
+
+
+/* La imagen de fondo */
+
+.hero-img {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    /* ESTA ES LA CLAVE: Hace que la imagen llene el espacio sin estirarse */
+
+    object-fit: cover;
+
+    /* Opcional: Centra la imagen si se recorta */
+
+    object-position: center;
+
+    z-index: 0;
+
+}
+
+
+
+/* Capa oscura (Overlay) para que el texto sea legible */
+
+.overlay {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.5); /* Ajusta el 0.5 para más o menos oscuridad */
+
+    z-index: 1;
+
+}
+
+
+
+/* Texto del Hero */
+
+.hero-text {
+
+    position: relative;
+
+    z-index: 2; /* Por encima de la imagen y el overlay */
+
+    color: white;
+
+    text-align: center;
+
+}
+
+
+
+/* 1. ELIMINAR EL MARCO NEGRO */
+
+fieldset {
+
+    border: none; /* Quita el borde por defecto */
+
+    padding: 0;   /* Quita el relleno por defecto */
+
+    margin: 0;
+
+}
+
+
+
+/* 2. DARLE AIRE AL FORMULARIO (SOLUCIÓN A LO "APLASTADO") */
+
+.venta-formulario {
+
+    /* Si tenías un borde aquí, quítalo o ponlo más suave */
+
+    border: none;
+
+   
+
+    /* Esto separa el contenido de los bordes de la pantalla */
+
+    padding: 20px;
+
+}
+
+
+
+/* Estilo para los campos de texto (Inputs) */
+
+.venta-formulario input[type="text"],
+
+.venta-formulario input[type="email"],
+
+.venta-formulario input[type="tel"],
+
+.venta-formulario textarea,
+
+.venta-formulario select {
+
+    width: 100%;
+
+   
+
+    /* ESTO ES LA CLAVE PARA QUE NO SE VEA APLASTADO */
+
+    padding: 15px; /* Más espacio interno para escribir */
+
+    margin-bottom: 20px; /* Más espacio entre cada pregunta */
+
+   
+
+    /* Estética moderna */
+
+    border: 1px solid #e0e0e0; /* Borde gris suave en lugar de negro */
+
+    border-radius: 4px; /* Esquinas ligeramente redondeadas */
+
+    background-color: #f9f9f9; /* Fondo muy claro para diferenciarlo */
+
+    font-size: 1rem; /* Letra de tamaño legible */
+
+    font-family: 'Montserrat', sans-serif;
+
+    outline: none; /* Quita el borde azul al hacer clic */
+
+    transition: all 0.3s ease;
+
+}
+
+
+
+/* Efecto al hacer clic en un campo */
+
+.venta-formulario input:focus,
+
+.venta-formulario textarea:focus {
+
+    border-color: #b2945e; /* Color dorado al escribir */
+
+    background-color: #ffffff;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+
+}
+
+
+
+/* Separación para las etiquetas (Labels) */
+
+.venta-formulario label {
+
+    display: block;
+
+    margin-bottom: 8px; /* Espacio entre el texto y la cajita */
+
+    font-weight: 500;
+
+    color: #333;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+
+/* Espaciado para los botones de opción (Radio buttons) */
+
+.radio-group {
+
+    margin-bottom: 25px;
+
+    padding: 10px 0;
+
+}
+
+
+
+.radio-item {
+
+    margin-right: 20px;
+
+    display: inline-flex; /* Alinea bolita y texto correctamente */
+
+    align-items: center;
+
+    gap: 5px;
+
+}

@@ -1,0 +1,384 @@
+/* --- ESTILOS PÁGINA NOSOTROS --- */
+
+
+
+.about-section {
+
+    padding: 80px 20px;
+
+}
+
+
+
+.section-title {
+
+    font-size: 2rem;
+
+    margin-bottom: 20px;
+
+    color: var(--dark);
+
+    font-weight: 300;
+
+}
+
+
+
+.center-text {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
+}
+
+
+
+.about-content {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 50px;
+
+}
+
+
+
+.about-text {
+
+    flex: 1;
+
+}
+
+
+
+.about-text p {
+
+    margin-bottom: 15px;
+
+    line-height: 1.6;
+
+    color: #555;
+
+}
+
+
+
+.about-image {
+
+    flex: 1;
+
+}
+
+
+
+.about-image img {
+
+    width: 100%;
+
+    border-radius: 2px;
+
+    box-shadow: 10px 10px 0px var(--gold);
+
+}
+
+
+
+.dark-title {
+
+    text-align: center;
+
+    color: #ffffff;
+
+    font-size: 2rem;
+
+    margin-bottom: 50px;
+
+    font-weight: 300;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+}
+
+
+
+
+
+.values-dark {
+
+    background-color: var(--dark);
+
+    padding: 40px 0;
+
+}
+
+
+
+.values-dark h4 {
+
+    color: var(--white);
+
+    margin-bottom: 10px;
+
+    font-size: 1.2rem;
+
+}
+
+
+
+.values-dark p {
+
+    color: #ccc;
+
+    font-size: 0.9rem;
+
+}
+
+
+
+
+
+.team-section {
+
+    padding: 80px 20px;
+
+}
+
+
+
+.team-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    text-align: center;
+
+}
+
+
+.team-card {
+    padding: 20px;
+    margin-top: 20px;
+    transition: transform 0.3s ease; /* Agrega esto para que se vea bonito al pasar el mouse */
+}
+
+
+.team-card h4 {
+
+    font-size: 1.1rem;
+
+    color: var(--dark);
+
+    margin-bottom: 5px;
+
+}
+
+
+
+.team-card .role {
+
+    color: var(--gold);
+
+    font-size: 0.85rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    font-weight: 700;
+
+}
+
+/* =========================================
+
+   CORRECCIÓN DE IMÁGENES HERO (TAMAÑO ENORME)
+
+   ========================================= */
+
+
+
+/* 1. Aseguramos que el contenedor sea la referencia */
+
+.hero {
+
+    position: relative;
+
+    /* El height ya lo tienes en el HTML (50vh), así que no lo ponemos aquí */
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+    /* ESTO ES IMPORTANTE: Corta lo que sobre de la imagen */
+
+}
+
+
+
+/* 2. La magia para la imagen */
+
+.hero-img {
+
+    position: absolute;
+    /* La sacamos del flujo normal para pegarla al fondo */
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    /* ESTA ES LA CLAVE: 'cover' hace que la imagen cubra todo el espacio
+
+       recortando los bordes si es necesario, sin estirarla ni deformarla. */
+
+    object-fit: cover;
+
+    z-index: 0;
+    /* Se queda atrás */
+
+}
+
+
+
+/* 3. Aseguramos que la capa oscura y el texto queden encima de la imagen */
+
+.overlay {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.5);
+    /* Capa oscura semitransparente */
+
+    z-index: 1;
+    /* Delante de la imagen */
+
+}
+
+
+
+.hero-text {
+
+    position: relative;
+
+    z-index: 2;
+    /* Delante de todo */
+
+}
+
+
+
+.organization-section {
+
+    padding: 60px 20px;
+
+    border-bottom: 1px solid #eee;
+
+}
+
+
+
+
+
+.org-grid {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    gap: 40px;
+
+    text-align: center;
+
+}
+
+
+
+.org-card {
+
+    flex: 1;
+
+    min-width: 250px;
+
+}
+
+
+
+.org-card h3 {
+
+    color: #b2945e;
+
+    font-size: 1.2rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+
+
+
+    border-bottom: 2px solid #121212;
+
+    display: inline-block;
+
+    padding-bottom: 5px;
+
+}
+
+
+
+.org-card p {
+
+    color: #555;
+
+    line-height: 1.6;
+
+}
+
+/* --- CLASE RECUPERADA PARA LOS CÍRCULOS --- */
+.img-circle {
+    width: 150px;
+    /* Tamaño fijo para que sean iguales */
+    height: 150px;
+    /* Altura igual al ancho */
+    border-radius: 50%;
+    /* ESTO es lo que hace el círculo */
+    overflow: hidden;
+    /* Recorta lo que sobre de la foto */
+    margin: 0 auto 20px;
+    /* Centra el círculo y da espacio abajo */
+    border: 3px solid #b2945e;
+    /* Borde dorado (o usa var(--gold) si prefieres) */
+}
+
+.img-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Evita que la cara se vea aplastada */
+}

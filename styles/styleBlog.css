@@ -1,0 +1,161 @@
+/* =========================================
+   ESTILOS DE LA PÁGINA BLOG (ESTRUCTURA)
+   ========================================= */
+
+/* Header simple para el blog (Gris oscuro con letras doradas) */
+.blog-header-section {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 40px;
+}
+
+.blog-header-section h2 {
+    font-size: 2.5rem;
+    color: var(--dark);
+    font-weight: 300;
+}
+
+.blog-header-section p {
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+/* --- Layout de Columnas (Reemplazo moderno de Float) --- */
+.blog-layout {
+    display: flex;
+    flex-wrap: wrap; /* Para que se adapte a celular */
+    gap: 30px; /* Espacio entre columnas */
+    align-items: flex-start; /* Alinea al top */
+    margin-bottom: 60px;
+}
+
+/* Columna Izquierda (75% aprox) */
+.leftcolumn {   
+    flex: 3; /* Toma 3 partes del espacio */
+    width: 100%; /* Fallback */
+}
+
+/* Columna Derecha (25% aprox) */
+.rightcolumn {
+    flex: 1; /* Toma 1 parte del espacio */
+    width: 100%; /* Fallback */
+}
+
+/* --- Estilos de las Tarjetas (Cards) --- */
+.card {
+    background-color: white;
+    padding: 0; /* Quitamos padding default para que la imagen llegue al borde */
+    margin-bottom: 30px;
+    border: 1px solid #eee;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Imágenes de los artículos */
+.fakeimg-container {
+    width: 100%;
+    height: 300px;
+    background-color: var(--dark);
+    overflow: hidden;
+}
+
+.blog-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Contenido de texto del blog */
+.blog-content {
+    padding: 30px;
+}
+
+.blog-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: var(--dark);
+}
+
+.blog-content .date {
+    font-size: 0.75rem;
+    color: #888;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- Estilos de la Barra Lateral (Sidebar) --- */
+.sidebar-card {
+    padding: 25px;
+}
+
+.sidebar-card h3 {
+    font-size: 1.1rem;
+    color: var(--dark);
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.fakeimg-sidebar {
+    width: 100%;
+    height: 150px;
+    background: #eee;
+    margin-bottom: 15px;
+}
+
+.sidebar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Lista de posts populares */
+.popular-list {
+    list-style: none;
+}
+
+.popular-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.popular-list img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.popular-list span {
+    font-size: 0.85rem;
+    color: #555;
+    font-weight: 500;
+}
+
+/* --- Responsive (Celular) --- */
+@media screen and (max-width: 800px) {
+  .blog-layout {
+    flex-direction: column; /* Pone una columna sobre otra */
+  }
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    flex: none;
+  }
+}
